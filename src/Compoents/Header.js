@@ -14,11 +14,11 @@ const Header = () => {
         lg:flex gap-20
         
         ' >
-          <a href=''>HOME</a>
-          <a href=''>ABOUT</a>
-          <a href=''>PROJECTS</a>
-          <a href=''> SKILLS</a>
-          <a href='' className='  
+          <a href='/'>HOME</a>
+          <a href='/'>ABOUT</a>
+          <a href='/'>PROJECTS</a>
+          <a href='/'> SKILLS</a>
+          <a href='/' className='  
           lg:border border-solid
           lg:pl-3 p-1
           lg:w-24 rounded-full 
