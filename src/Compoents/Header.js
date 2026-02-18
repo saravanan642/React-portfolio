@@ -1,63 +1,93 @@
-import React, { useState } from 'react'
-import background from "../Assests/letter-s.png"
+import React, { useState } from "react";
+import background from "../Assests/letter-s.png";
 import { TiThMenu } from "react-icons/ti";
 
 const Header = () => {
-  const [open, setOpen] = useState(false); 
+  const [open, setOpen] = useState(false);
+
   return (
-    <div>
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-yellow-50/20">
 
-      <div className="flex text-white gap-11 justify-around py-3 border-b border-yellow-50/40 font-serif"
->
-        <div className=' flex gap-4 ml-auto border border-none pl-[14%]'>
-          <img src={background} alt='background' className=' w-[10%] rounded-full' ></img>
-          <h1 className=' text-3xl mt-2 '>Saravanan</h1>
+      {/* Navbar */}
+      <div className="flex items-center justify-between px-6 md:px-16 py-4 text-white font-serif">
+
+        {/* Logo Section */}
+        <div className="flex items-center gap-3">
+          <img
+            src={background}
+            alt="logo"
+            className="w-10 h-10 rounded-full hover:scale-110 transition duration-300"
+          />
+          <h1 className="text-xl hover:text-cyan-300 md:text-2xl font-semibold tracking-wide">
+            Saravanan
+          </h1>
         </div>
 
-        <div className=" flex  flex-col md:flex-row  gap-5 md:gap-16  mt-3  lg:mt-4  lg:pr-[7%] hidden md:flex">
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-10 text-sm tracking-wide">
 
-          <a href="/" className="relative hover:text-cyan-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
-            HOME
+          {["HOME", "ABOUT", "PROJECTS", "SKILLS"].map((item) => (
+            <a
+              key={item}
+              href="/"
+              className="relative hover:text-cyan-300 transition duration-300 
+              after:content-[''] after:absolute after:left-0 after:-bottom-1 
+              after:w-0 after:h-[2px] after:bg-cyan-300 
+              after:transition-all after:duration-300 
+              hover:after:w-full"
+            >
+              {item}
+            </a>
+          ))}
+
+          <a
+            href="/"
+            className="px-4 py-1.5 rounded-full bg-blue-600 hover:bg-blue-800 transition duration-300"
+          >
+            Contact
           </a>
+        </nav>
 
-          <a href="/" className="relative hover:text-cyan-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
-            ABOUT
-          </a>
-
-          <a href="/" className="relative hover:text-cyan-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
-            PROJECTS
-          </a>
-
-          <a href="/" className="relative hover:text-cyan-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
-            SKILLS
-          </a>
-
-          <a href="/" className="relative p-1 rounded-full bg-blue-600 hover:bg-blue-900 lg:border lg:pl-[14px] lg:w-24 lg:bottom-2 lg:mt-1">
-            Contents
-          </a>
-
-        </div>
-
-        <div className=' text-5xl mr-9 md:hidden' onClick={()=>setOpen(!open)}>
-          <TiThMenu  />
+        {/* Mobile Menu Icon */}
+        <div
+          className="text-3xl md:hidden cursor-pointer transition duration-300 hover:rotate-90"
+          onClick={() => setOpen(!open)}
+        >
+          <TiThMenu />
         </div>
       </div>
 
-      <div>{open && (
-  <div className="flex flex-col gap-6 mt-4 text-center text-white px-6 md:hidden">
-    <a href="/">HOME</a>
-    <a href="/">ABOUT</a>
-    <a href="/">PROJECTS</a>
-    <a href="/">SKILLS</a>
-    <a href="/" className="bg-blue-600 p-2 rounded-md w-fit ">
-      Contents
-    </a>
-  </div>
-)}
-</div>
-    </div>
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        } bg-black/80 backdrop-blur-md`}
+      >
+        <div className="flex flex-col items-center gap-6 py-6 text-white">
 
-  )
-}
+          {["HOME", "ABOUT", "PROJECTS", "SKILLS"].map((item) => (
+            <a
+              key={item}
+              href="/"
+              onClick={() => setOpen(false)}
+              className="hover:text-cyan-300 transition duration-300 text-sm tracking-wide"
+            >
+              {item}
+            </a>
+          ))}
 
-export default Header
+          <a
+            href="/"
+            onClick={() => setOpen(false)}
+            className="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-800 transition duration-300"
+          >
+            Contact
+          </a>
+
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
