@@ -3,11 +3,12 @@ import background from "../Assests/letter-s.png"
 import { TiThMenu } from "react-icons/ti";
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
   return (
     <div>
 
-      <div className=' flex   text-white gap-11 justify-around py-3  border-b  font-serif'>
+      <div className="flex text-white gap-11 justify-around py-3 border-b border-yellow-50/40 font-serif"
+>
         <div className=' flex gap-4 ml-auto border border-none pl-[14%]'>
           <img src={background} alt='background' className=' w-[10%] rounded-full' ></img>
           <h1 className=' text-3xl mt-2 '>Saravanan</h1>
