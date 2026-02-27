@@ -1,32 +1,31 @@
 import React from "react";
-import hotelImg from "../Assests/b73384d7-b6f9-4f66-89e7-9442bda24545.png";
 
 const Projects = () => {
 
   const projectData = [
     {
       title: "Model HTML CSS",
-      desc: "Model Malabar is a responsive fashion website built using HTML and CSS. It showcases modern collections with a clean layout and user-friendly design.",
+      desc: "Model Malabar is a responsive fashion website built using HTML and CSS with a clean and elegant layout.",
       tech: ["HTML", "CSS"],
+      image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80", // Gold Fashion
       live: "#",
-      github: "https://github.com/saravanan642/Malabar-gold",
-      image: "https://via.placeholder.com/400x250"
+      github: "#"
     },
     {
-      title: "VillageRetail-Sales",
-      desc: "Village Retail Sales is a frontend web application built using HTML, CSS, and JavaScript. It helps manage products and sales records through a simple and user-friendly interface.",
-      tech: ["React", "Tailwind"],
-      live: "https://village-retail-sales.vercel.app/",
-      github: "https://github.com/saravanan642/VillageRetail-Sales",
-      image: "https://via.placeholder.com/400x250"
+      title: "Village Retail Sales",
+      desc: "Village Retail Sales is a frontend web application to manage products and sales with a simple interface.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80", // Vehicles
+      live: "#",
+      github: "#"
     },
     {
       title: "Hotel Booking in Kerala",
-      desc: "Hotel Booking in Kerala is a frontend web application developed using HTML, CSS, and JavaScript. It enables users to browse hotel listings and simulate bookings through a responsive interface.",
-      tech: ["React", "Tailwind"],
-      live: "https://hotel-react-lac.vercel.app/",
-      github: "https://github.com/saravanan642/Hotel-React",
-      image: hotelImg   // ✅ Correct usage
+      desc: "A frontend hotel booking website that allows users to explore Kerala resorts and simulate bookings.",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", // Kerala Nature
+      live: "#",
+      github: "#"
     }
   ];
 
@@ -37,18 +36,12 @@ const Projects = () => {
 
       <div className="max-w-7xl mx-auto">
 
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold bg-gradient-to-r 
-          from-pink-400 to-purple-400 bg-clip-text text-transparent">
-            My Projects
-          </h1>
-          <p className="text-gray-400 mt-4">
-            A showcase of my recent frontend and full stack projects.
-          </p>
-        </div>
+        <h1 className="text-5xl font-bold text-center mb-16 
+        bg-gradient-to-r from-pink-400 to-purple-400 
+        bg-clip-text text-transparent">
+          My Projects
+        </h1>
 
-        {/* Project Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
           {projectData.map((project, index) => (
@@ -78,7 +71,6 @@ const Projects = () => {
                   {project.desc}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
@@ -92,12 +84,9 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Buttons */}
                 <div className="flex gap-4 pt-4">
                   <a
                     href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="px-4 py-2 text-sm rounded-lg 
                     bg-pink-500 hover:bg-pink-600 transition"
                   >
@@ -106,8 +95,6 @@ const Projects = () => {
 
                   <a
                     href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="px-4 py-2 text-sm rounded-lg 
                     border border-white/30 hover:bg-white/10 transition"
                   >
