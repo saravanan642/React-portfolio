@@ -31,13 +31,13 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br 
-    from-[#0f0c29] via-[#1a0033] to-[#24243e] 
+    from-[#0a192f] via-[#112240] to-[#1b2a49] 
     text-white px-6 md:px-20 py-24">
 
       <div className="max-w-7xl mx-auto">
 
         <h1 className="text-5xl font-bold text-center mb-16 
-        bg-gradient-to-r from-pink-400 to-purple-400 
+        bg-gradient-to-r from-cyan-400 to-blue-500 
         bg-clip-text text-transparent">
           My Projects
         </h1>
@@ -50,7 +50,7 @@ const Projects = () => {
               className="bg-white/5 backdrop-blur-xl 
               border border-white/10 
               rounded-3xl overflow-hidden 
-              hover:scale-105 hover:shadow-pink-500/20 
+              hover:scale-105 hover:shadow-cyan-500/20 
               transition duration-500"
             >
               {/* Image */}
@@ -63,7 +63,7 @@ const Projects = () => {
               {/* Content */}
               <div className="p-6 space-y-4">
 
-                <h3 className="text-xl font-semibold text-pink-300">
+                <h3 className="text-xl font-semibold text-cyan-300">
                   {project.title}
                 </h3>
 
@@ -76,8 +76,8 @@ const Projects = () => {
                     <span
                       key={i}
                       className="px-3 py-1 text-xs rounded-full 
-                      bg-gradient-to-r from-pink-500/20 to-purple-500/20 
-                      border border-white/20"
+                      bg-gradient-to-r from-cyan-500/20 to-blue-500/20 
+                      border border-cyan-400/30"
                     >
                       {tech}
                     </span>
@@ -88,7 +88,7 @@ const Projects = () => {
                   <a
                     href={project.live}
                     className="px-4 py-2 text-sm rounded-lg 
-                    bg-pink-500 hover:bg-pink-600 transition"
+                    bg-cyan-600 hover:bg-cyan-700 transition"
                   >
                     Live Demo
                   </a>

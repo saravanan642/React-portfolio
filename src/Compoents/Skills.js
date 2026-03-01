@@ -5,11 +5,11 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Tailwind CSS"]
+      skills: ["HTML5", "CSS3", "JavaScript ", "React.js", "Tailwind CSS"]
     },
     {
       title: "Tools & Technologies",
-      skills: ["Git", "GitHub", "VS Code", "Chrome DevTools"]
+      skills: ["Git", "GitHub", "VS Code", ]
     },
     {
       title: "UI / UX Knowledge",
@@ -19,14 +19,14 @@ const Skills = () => {
 
   return (
     <section className="min-h-screen 
-    bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] 
+    bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#1b2a49] 
     text-white px-6 md:px-20 py-28">
 
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-teal-300">
+          <h1 className="text-5xl font-bold text-cyan-400">
             Technical Skills
           </h1>
           <p className="text-gray-300 mt-4 text-lg">
@@ -40,14 +40,14 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-lg 
-              border border-white/20 
+              className="bg-white/5 backdrop-blur-lg 
+              border border-white/10 
               rounded-2xl p-8 shadow-lg 
-              hover:shadow-teal-400/30 
+              hover:shadow-cyan-500/30 
               transition duration-500"
             >
 
-              <h2 className="text-xl font-semibold text-teal-300 mb-6">
+              <h2 className="text-xl font-semibold text-cyan-300 mb-6">
                 {category.title}
               </h2>
 
@@ -58,7 +58,7 @@ const Skills = () => {
                     key={i}
                     className="flex items-center gap-3"
                   >
-                    <span className="w-2 h-2 bg-teal-400 rounded-full"></span>
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                     {skill}
                   </li>
                 ))}
