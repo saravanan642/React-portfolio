@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Model HTML CSS",
       desc: "Model Malabar is a responsive fashion website built using HTML and CSS with a clean and elegant layout.",
       tech: ["HTML", "CSS"],
-      image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80", // Gold Fashion
+      image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80", 
       live: "#",
       github: "#"
     },
@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Village Retail Sales",
       desc: "Village Retail Sales is a frontend web application to manage products and sales with a simple interface.",
       tech: ["HTML", "CSS", "JavaScript"],
-      image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80", // Vehicles
+      image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80", 
       live: "#",
       github: "#"
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Hotel Booking in Kerala",
       desc: "A frontend hotel booking website that allows users to explore Kerala resorts and simulate bookings.",
       tech: ["HTML", "CSS", "JavaScript"],
-      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", // Kerala Nature
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80", 
       live: "#",
       github: "#"
     }

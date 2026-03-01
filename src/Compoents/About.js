@@ -13,12 +13,12 @@ const About = () => {
 
   return (
     <section className="relative min-h-screen flex items-center 
-    bg-gradient-to-br from-[#1a002e] via-[#22003c] to-[#14001f] 
+    bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#1b2a49] 
     text-white px-6 md:px-20 py-24 overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute w-96 h-96 bg-pink-600/20 blur-3xl rounded-full top-10 left-0"></div>
-      <div className="absolute w-96 h-96 bg-purple-600/20 blur-3xl rounded-full bottom-0 right-0"></div>
+      <div className="absolute w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full top-10 left-0"></div>
+      <div className="absolute w-96 h-96 bg-blue-500/20 blur-3xl rounded-full bottom-0 right-0"></div>
 
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
 
@@ -27,7 +27,7 @@ const About = () => {
 
           <div>
             <h1 className="text-5xl font-bold tracking-wide">
-              <span className="border-l-4 border-pink-500 pl-4">
+              <span className="border-l-4 border-cyan-400 pl-4">
                 About Me
               </span>
             </h1>
@@ -37,7 +37,7 @@ const About = () => {
 
             <p>
               Hello, I’m <span className="text-white font-semibold">Saravanan</span>, 
-              a <span className="text-pink-400 font-semibold">Frontend Developer</span> 
+              a <span className="text-cyan-400 font-semibold">Frontend Developer</span> 
               who enjoys building elegant and user-focused web interfaces.
             </p>
 
@@ -60,7 +60,7 @@ const About = () => {
         border border-white/10 rounded-3xl 
         p-10 shadow-2xl">
 
-          <h2 className="text-2xl font-semibold text-purple-300 mb-8">
+          <h2 className="text-2xl font-semibold text-cyan-300 mb-8">
             Core Skills
           </h2>
 
@@ -70,9 +70,9 @@ const About = () => {
               <span
                 key={index}
                 className="px-6 py-2 text-sm rounded-full 
-                bg-gradient-to-r from-pink-500/20 to-purple-500/20 
-                border border-pink-400/30 
-                hover:scale-110 hover:border-pink-400 
+                bg-gradient-to-r from-cyan-500/20 to-blue-500/20 
+                border border-cyan-400/30 
+                hover:scale-110 hover:border-cyan-400 
                 transition duration-300 cursor-pointer"
               >
                 {skill}
