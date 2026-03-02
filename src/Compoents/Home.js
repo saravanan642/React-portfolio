@@ -4,12 +4,12 @@ import profile from "../Assests/saravanan.png";
 const Home = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 md:px-20 
-    bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#1b2a49]">
+    bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#1b2a49] ">
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-20  w-full max-w-6xl">
+      <div className="flex flex-col-reverse md:flex-row items-center  gap-40  w-full max-w-6xl">
 
         {/* Left Content */}
-        <div className="text-white font-serif max-w-3xl text-center md:text-left md:ml-[7%]">
+        <div className="text-white font-serif max-w-3xl text-center md:text-left md:ml-[%]">
 
           {/* Greeting */}
           <p className="text-lg md:text-2xl mb-4 animate-fadeIn">
