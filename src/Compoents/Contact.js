@@ -57,6 +57,7 @@ const Contact = () => {
           <h1 className="text-5xl font-bold">
             Get In <span className="text-cyan-400">Touch</span>
           </h1>
+          <p className="text-xl font-light">I’m always open to discussing new opportunities, internships, freelance projects, or collaborations. If you’re looking for a passionate Frontend Developer, feel free to reach out.</p>
 
           {submitted && (
             <p className="text-green-400 font-semibold">
