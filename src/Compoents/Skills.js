@@ -4,76 +4,90 @@ const Skills = () => {
 
   const skillCategories = [
     {
+      number: "01",
       title: "Frontend Development",
-      skills: ["HTML5", "CSS3", "JavaScript ", "React.js", "Tailwind CSS"]
+      skills: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React.js",
+        "Tailwind CSS",
+        "Responsive Design",
+        "Accessibility Basics"
+      ]
     },
     {
-      title: "Tools & Technologies",
-      skills: ["Git", "GitHub", "VS Code", ]
-    },
-    {
-      title: "UI / UX Knowledge",
-      skills: ["Responsive Design", "Wireframing Basics", "Layout Hierarchy", "Accessibility Principles"]
+      number: "02",
+      title: "Tools & Workflow",
+      skills: [
+        "Git & GitHub",
+        "VS Code",
+        "Chrome DevTools",
+        "Basic API Integration"
+      ]
     }
   ];
 
   return (
-    <section className="min-h-screen 
-    bg-gradient-to-br from-[#0a192f] via-[#112240] to-[#1b2a49] 
-    text-white px-6 md:px-20 py-28">
+    <section className="relative min-h-screen 
+    bg-gradient-to-br from-[#0f1f3d] via-[#0b2a4a] to-[#0a1c33] 
+    text-white px-6 md:px-20 py-28 overflow-hidden">
 
-      <div className="max-w-6xl mx-auto">
+      {/* Glow Effects (Same as About) */}
+      <div className="absolute top-10 left-0 w-96 h-96 
+      bg-cyan-500/10 blur-3xl rounded-full"></div>
 
-        {/* Heading */}
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-cyan-400">
-            Technical Skills
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] 
+      bg-blue-500/10 blur-3xl rounded-full"></div>
+
+      <div className="relative max-w-7xl mx-auto grid md:grid-cols-3 gap-20">
+
+        {/* LEFT SIDE BIG TITLE */}
+        <div className="md:col-span-1 space-y-6 mt-40">
+          <h1 className="text-6xl font-bold leading-tight">
+            My <span className="text-cyan-400">Skills</span>
           </h1>
-          <p className="text-gray-300 mt-4 text-lg">
-            Frontend development expertise with strong UI focus.
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            I focus on building clean, scalable, and high-performance 
+            frontend applications with strong attention to usability 
+            and modern development standards.
           </p>
         </div>
 
-        {/* Skill Categories */}
-        <div className="grid md:grid-cols-3 gap-12">
+        {/* RIGHT SIDE SKILL BLOCKS */}
+        <div className="md:col-span-2 space-y-16">
 
           {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-lg 
-              border border-white/10 
-              rounded-2xl p-8 shadow-lg 
-              hover:shadow-cyan-500/30 
-              transition duration-500"
-            >
+            <div key={index} className="border-l-4 border-cyan-400 pl-8">
 
-              <h2 className="text-xl font-semibold text-cyan-300 mb-6">
-                {category.title}
-              </h2>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-4xl font-bold text-gray-600">
+                  {category.number}
+                </span>
+                <h2 className="text-2xl font-semibold text-cyan-300">
+                  {category.title}
+                </h2>
+              </div>
 
-              <ul className="space-y-3 text-gray-200">
-
+              <div className="grid sm:grid-cols-2 gap-4">
                 {category.skills.map((skill, i) => (
-                  <li 
+                  <div
                     key={i}
-                    className="flex items-center gap-3"
+                    className="bg-white/5 border border-white/10 
+                    rounded-lg px-5 py-3 
+                    hover:bg-cyan-500/10 
+                    hover:border-cyan-400/40 
+                    transition duration-300"
                   >
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                     {skill}
-                  </li>
+                  </div>
                 ))}
-
-              </ul>
+              </div>
 
             </div>
           ))}
 
-        </div>
-
-        {/* Bottom Statement */}
-        <div className="mt-24 text-center text-gray-300 max-w-3xl mx-auto">
-          I build scalable and maintainable frontend applications 
-          with clean architecture and strong attention to user experience.
         </div>
 
       </div>
