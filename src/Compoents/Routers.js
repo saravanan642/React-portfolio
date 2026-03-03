@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Header from "./Header";
 import Footer from "./Footer"
+import Resume from "./Resume";
 
 const Routers = () => {
     return (
@@ -15,6 +16,7 @@ const Routers = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/resume" element={<Resume />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/skills" element={<Skills />} />
