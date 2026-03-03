@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import background from "../Assests/letter-s.png";
 import { TiThMenu } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -28,26 +29,28 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-10 text-sm tracking-wide">
 
-          {["HOME", "ABOUT", "PROJECTS", "SKILLS"].map((item) => (
-            <a
-              key={item}
-              href="/"
-              className="relative hover:text-cyan-300 transition duration-300 
-              after:content-[''] after:absolute after:left-0 after:-bottom-1 
-              after:w-0 after:h-[2px] after:bg-cyan-300 
-              after:transition-all after:duration-300 
-              hover:after:w-full"
-            >
-              {item}
-            </a>
-          ))}
+          <Link to={"/"} className="relative hover:text-cyan-300 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
+            HOME
+          </Link>
 
-          <a
-            href="/"
+          <Link to={"/about"} className="relative hover:text-cyan-300 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
+            ABOUT
+          </Link>
+
+          <Link to={"/projects"} className="relative hover:text-cyan-300 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
+            PROJECTS
+          </Link>
+
+          <Link to={"/skills"} className="relative hover:text-cyan-300 transition duration-300 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-cyan-300 after:transition-all after:duration-300 hover:after:w-full">
+            SKILLS
+          </Link>
+
+          <Link
+            to={"/contact"}
             className="px-4 py-1.5 rounded-full bg-cyan-600 hover:bg-cyan-700 transition duration-300"
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Icon */}
@@ -59,7 +62,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${
           open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -67,24 +70,18 @@ const Header = () => {
       >
         <div className="flex flex-col items-center gap-6 py-6 text-white">
 
-          {["HOME", "ABOUT", "PROJECTS", "SKILLS"].map((item) => (
-            <a
-              key={item}
-              href="/"
-              onClick={() => setOpen(false)}
-              className="hover:text-cyan-300 transition duration-300 text-sm tracking-wide"
-            >
-              {item}
-            </a>
-          ))}
+          <Link to="/" onClick={() => setOpen(false)}>HOME</Link>
+          <Link to="/about" onClick={() => setOpen(false)}>ABOUT</Link>
+          <Link to="/projects" onClick={() => setOpen(false)}>PROJECTS</Link>
+          <Link to="/skills" onClick={() => setOpen(false)}>SKILLS</Link>
 
-          <a
-            href="/"
+          <Link
+            to="/contact"
             onClick={() => setOpen(false)}
             className="bg-cyan-600 px-6 py-2 rounded-full hover:bg-cyan-700 transition duration-300"
           >
             Contact
-          </a>
+          </Link>
 
         </div>
       </div>
