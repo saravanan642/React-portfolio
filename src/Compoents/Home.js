@@ -49,13 +49,13 @@ const Home = () => {
 
             {/* Buttons */}
             <div className="mt-8 flex justify-center md:justify-start gap-4 animate-fadeIn delay-700">
-              <button className="px-6 py-2 rounded-full bg-cyan-600 hover:bg-cyan-700 transition duration-300 shadow-lg shadow-cyan-600/40 hover:scale-105">
+              <a className="px-6 py-2 rounded-full bg-cyan-600 hover:bg-cyan-700 transition duration-300 shadow-lg shadow-cyan-600/40 hover:scale-105">
                 Hire Me
-              </button>
+              </a>
 
-              <button className="px-6 py-2 rounded-full border border-cyan-400 hover:bg-cyan-500 hover:text-white transition duration-300 hover:scale-105">
+              <a  href="/projects" className="px-6 py-2 rounded-full border border-cyan-400 hover:bg-cyan-500 hover:text-white transition duration-300 hover:scale-105 ">
                 View Projects
-              </button>
+              </a >
             </div>
 
           </div>

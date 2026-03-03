@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative 
+    <footer className="relative  font-medium
     bg-gradient-to-br from-[#0f1f3d] via-[#0b2a4a] to-[#0a1c33] 
     text-gray-300 px-6 md:px-20 py-16 overflow-hidden broder border-solid  border-[#95b1d5]  border-t">
 
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold text-cyan-400 uppercase tracking-wider mb-4">
+            <h3 className="text-xl  text-cyan-400 uppercase tracking-wider mb-4">
               Contact
             </h3>
 
@@ -62,10 +62,10 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-4 text-lg">
-              <a href="#" className="hover:text-cyan-400 transition">
+              <a href="https://www.linkedin.com/in/saravanan-senthil-56492435b/" className="hover:text-cyan-400 px-6 py-2 rounded-full bg-cyan-600 hover:bg-cyan-700 transition duration-300 shadow-lg shadow-cyan-600/40 hover:scale-105">
                 LinkedIn
               </a>
-              <a href="#" className="hover:text-cyan-400 transition">
+              <a href="https://github.com/saravanan642/" className="hover:text-cyan-400 px-6 py-2 rounded-full bg-cyan-600 hover:bg-cyan-700 transition duration-300 shadow-lg shadow-cyan-600/40 hover:scale-105">
                 GitHub
               </a>
             </div>
