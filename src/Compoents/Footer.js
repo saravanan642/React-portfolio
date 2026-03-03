@@ -36,13 +36,13 @@ const Footer = () => {
 
             <ul className="space-y-3 text-lg">
               <div className="flex gap-8">
-                <li className="hover:text-cyan-400 transition">Home</li>
-                <li className="hover:text-cyan-400 transition">About</li>
-                <li className="hover:text-cyan-400 transition">Projects</li>
+                <li className="hover:text-cyan-400 transition  cursor-pointer">Home</li>
+                <li className="hover:text-cyan-400 transition cursor-pointer">About</li>
+                <li className="hover:text-cyan-400 transition cursor-pointer">Projects</li>
               </div>
-              <div className="flex gap-9 mt-2">
-                <li className="hover:text-cyan-400 transition">Skills</li>
-                <li className="hover:text-cyan-400 transition">Contact</li>
+              <div className="flex gap-9 mt-2 ">
+                <li className="hover:text-cyan-400 transition cursor-pointer">Skills</li>
+                <li className="hover:text-cyan-400 transition cursor-pointer">Contact</li>
               </div>
             </ul>
           </div>
